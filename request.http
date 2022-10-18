@@ -1,0 +1,54 @@
+##
+POST http://localhost:8000/api/lesson
+Content-Type: application/json
+
+{
+    "videoFrame" : "Hộp trà quà tặng",
+    "image": "sfasadf",
+    "name": "test",
+    "index" : 0,
+    "token": "lichdt"
+}
+
+###
+GET http://localhost:8000/api/lesson
+
+###
+PUT http://localhost:8000/api/lesson/634eb1ead50629feb93ad583
+Content-Type: application/json
+
+{
+    "name" : "Chè Thái Nguyên",
+    "token" : "lichdt"
+}
+
+
+//// Từ mới
+###
+POST http://localhost:8000/api/word
+Content-Type: application/json
+
+{
+    "lesson" : "634eb1ead50629feb93ad583",
+    "word": "hello",
+    "pronounce" : "hé lu",
+    "explain" : "xin chào",
+    "type": "động từ",
+    "image": "http://localhost:8000/",
+    "sound": "fsfa",
+    "token": "lichdt"
+}
+
+###
+GET http://localhost:8000/api/word/634eb1ead50629feb93ad583
+
+###
+PUT http://localhost:8000/api/word/634eb7726727bf71354d0843
+Content-Type: application/json
+
+{
+    "word" : "Chè Thái Nguyên 1",
+    "token" : "lichdt"
+}
+
+
