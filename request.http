@@ -40,7 +40,7 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:8000/api/word/634eb1ead50629feb93ad583
+GET http://localhost:8000/api/word/634f54e9ff25a07293354ccc
 
 ###
 PUT http://localhost:8000/api/word/634eb7726727bf71354d0843

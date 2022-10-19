@@ -3,9 +3,22 @@ import Lesson from '../models/Lesson.js';
 //get all lesson
 export const getAll = async (req, res) => {
     try {
-        const lessons = await Lesson.find();
+        const lessons = await Lesson.find().sort({ index: 1 });
 
         res.status(200).json(lessons);
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ success: false, message: 'Invalid server !' });
+    }
+};
+
+//get a lesson
+export const getById = async (req, res) => {
+    const { id } = req.params;
+    try {
+        const lesson = await Lesson.findById(id);
+
+        res.status(200).json(lesson);
     } catch (error) {
         console.log(error);
         res.status(500).json({ success: false, message: 'Invalid server !' });

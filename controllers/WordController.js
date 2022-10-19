@@ -4,7 +4,19 @@ import Word from '../models/Word.js';
 export const getByLesson = async (req, res) => {
     const { lessonId } = req.params;
     try {
-        const words = await Word.find({ lesson: lessonId });
+        const words = await Word.find({ lesson: lessonId }).sort({ word: 1 });
+        res.status(200).json(words);
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ success: false, message: 'Invalid server !' });
+    }
+};
+
+//get all
+
+export const getAll = async (req, res) => {
+    try {
+        const words = await Word.find();
         res.status(200).json(words);
     } catch (error) {
         console.log(error);
