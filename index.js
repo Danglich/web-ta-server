@@ -5,6 +5,7 @@ import mongoose from 'mongoose';
 
 import lessonRouter from './routes/lesson.js';
 import wordRouter from './routes/word.js';
+import postRouter from './routes/post.js';
 
 dotenv.config();
 
@@ -51,7 +52,8 @@ const PORT = process.env.PORT || 8000;
 
 app.use('/api/lesson', lessonRouter);
 app.use('/api/word', wordRouter);
+app.use('/api/post', postRouter);
 
 app.listen(PORT, () => {
-    console.log('listening on port ' + PORT);
+    console.log('listening on port  ' + PORT);
 });

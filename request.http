@@ -52,3 +52,25 @@ Content-Type: application/json
 }
 
 
+//// Postt 
+###
+POST http://localhost:8000/api/post
+Content-Type: application/json
+
+{
+    "title": "hello",
+    "content" : "hé lu",
+    "image" : "xin chào",
+    "desc": "động từ",
+    "token" : "lichdt"
+}
+
+###
+
+//GET BY ID
+GET http://localhost:8000/api/post/635162eb86152504552286fa
+
+###
+//GET ALL
+GET http://localhost:8000/api/post
+
